@@ -6,6 +6,7 @@
 - Go to http://127.0.0.1:4000 in the browser.
 - Copy a file under `_posts` and change the file name, title, etc.
 - Write the post.
+- Open preview with cmd+shift+V. Open preview to the side with cmd+K and then V.
 - Save the file.
 - Reload web page.
 
