@@ -9,15 +9,16 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
       perSystem = { pkgs, self', system, ... }:
-        # let
-        #   gems = pkgs.bundlerEnv {
-        #     name = "gems-for-pallaspp.github.io";
-        #     gemdir = ./.;
-        #   };
-        # in
+        let
+          ruby = pkgs.ruby.withPackages (ps: with ps; [ jekyll ]);
+          # gems = pkgs.bundlerEnv {
+          #   name = "gems-for-pallaspp.github.io";
+          #   gemdir = ./.;
+          # };
+        in
         {
           devShells.default = pkgs.mkShell {
-            packages = [ (pkgs.ruby.withPackages (ps: with ps; [ jekyll ])) pkgs.bundix ];
+            packages = [ ruby ];
           };
           # devShells.default = pkgs.mkShell {
           #   buildInputs = [ gems gems.wrappedRuby gems.bundler ];
