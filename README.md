@@ -1,5 +1,11 @@
 # pallaspp.github.io
 
+## Startup
+
+- Launch VS Code.
+- Open pallaspp.github.io folder. It usually opens automatically (check whether there's a window whose title is "pallaspp.github.io"). If not, there's usually a 欢迎 page; under 最近, click "pallaspp.github.io" (whose path is "~/Documents"). If there's not even a 欢迎 page, click 文件 -> 打开文件夹 in the menu bar, and choose ~/Documents/pallaspp.github.io.
+- Open terminal with ctrl+` if not open yet.
+
 ## Local development
 
 - Run `bundle exec jekyll serve` in the terminal.
